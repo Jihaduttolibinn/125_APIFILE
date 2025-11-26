@@ -1,6 +1,6 @@
 const express = require('express');
 const connectDatabase = require('./config/db');
-//const apiRoute = require('./routes/api');
+const apiRoute = require('./routes/api');
 
 const app = express();
 const PORT = 3000;
@@ -8,7 +8,8 @@ const PORT = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-//app.use('/api/v1', apiRoute);
+// Mount API routes at /api
+app.use('/api', apiRoute);
 
 async function startServer() {
     await connectDatabase();
