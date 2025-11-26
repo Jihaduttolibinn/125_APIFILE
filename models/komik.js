@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
         imageData : DataTypes.BLOB('long'),
         }, 
     {
-        tableName: 'komiks',
+        tableName: 'Komik',
     });
     return Komik;
 };
