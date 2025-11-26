@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const komikController = require('../controllers/komikController');
+const komikController = require('../controllers/KomikController.js');
 const upload = multer({ storage: multer.memoryStorage() });
 
 router.post('/komiks', upload.single('image'), komikController.createKomik);
